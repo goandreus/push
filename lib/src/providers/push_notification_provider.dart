@@ -20,8 +20,6 @@ class PushNotificationProvider{
          print('+++++++++ on message ++++++++++++');
          print(info);
 
-         final noti = info['data']['comida'];
-          print(noti);
 
        },
         
@@ -33,6 +31,10 @@ class PushNotificationProvider{
        onResume: (info) async {
          print('========= on resume===========');
          print(info);
+
+          //info notification  push example
+          //final noti = info['data']['comida'];
+          //print(noti);
        }
 
      );
