@@ -13,6 +13,29 @@ class PushNotificationProvider{
        print('++++TOKEN+++++++++');
        print(token);
      });
+
+
+     _firebaseMessaging.configure(
+       onMessage: (info) async {
+         print('+++++++++ on message ++++++++++++');
+         print(info);
+
+         final noti = info['data']['comida'];
+          print(noti);
+
+       },
+        
+       onLaunch: (info) async {
+         print("+++++++++ on launch +++++++++++");
+         print(info);
+       },
+
+       onResume: (info) async {
+         print('========= on resume===========');
+         print(info);
+       }
+
+     );
    }
 
 }
