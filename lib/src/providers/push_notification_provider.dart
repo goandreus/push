@@ -42,6 +42,9 @@ class PushNotificationProvider{
          print('========= on resume===========');
          print(info);
 
+         final noti = info['data']['comida'];
+         _messageStreamController.sink.add(noti);
+
           //info notification  push example
           //final noti = info['data']['comida'];
           //print(noti);
